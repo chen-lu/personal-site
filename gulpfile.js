@@ -45,6 +45,8 @@ gulp.task('clean', function(){
 
 //builds and minifies css/js files
 gulp.task('build', ['clean'],  function(){
+  gulp.src('app/images/**/*.png')
+    .pipe(gulp.dest('dist/images'));
   gulp.src('app/index.html')
     .pipe(usemin({
       assetsDir: 'app',
