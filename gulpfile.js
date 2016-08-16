@@ -31,8 +31,8 @@ gulp.task('less', function() {
 
 gulp.task('scripts', function(){
   return gulp.src('app/js/**/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'))
+    // .pipe(jshint())
+    // .pipe(jshint.reporter('jshint-stylish'))
     .pipe(browserSync.reload({
       stream : true
     }));
@@ -47,6 +47,8 @@ gulp.task('clean', function(){
 gulp.task('build', ['clean'],  function(){
   gulp.src('app/images/**/*.png')
     .pipe(gulp.dest('dist/images'));
+  gulp.src('app/data/**/*.json')
+    .pipe(gulp.dest('dist/data'));
   gulp.src('app/index.html')
     .pipe(usemin({
       assetsDir: 'app',

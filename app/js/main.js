@@ -6,7 +6,7 @@ $( document ).ready(function() {
 
   $(window).resize(function(){
     hdr = $('.full-page').height()-pad;
-  })
+  });
 
   $(window).scroll(function() {
     if( $(this).scrollTop() > hdr ) {
