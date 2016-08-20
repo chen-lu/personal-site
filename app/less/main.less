@@ -144,9 +144,11 @@ body{
 
   .content {
     margin: 0;
+
     p {
       font-size: 14px;
       color: @gray;
+      font-weight: 300;
     }
   }
 
@@ -157,6 +159,39 @@ body{
 
   &.experience {
     margin: 10% 25% 10% 25%;
+
+    .sub-heading {
+      font-weight: 300;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: @gray;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+    .date {
+      float: left;
+      width: 30%;
+      font-size: 14px;
+      color: @gray;
+      font-weight: 300;
+    }
+    .info {
+      width: 70%;
+      margin-left: 30%;
+      padding-bottom: 6px;
+      p {
+        margin: 0;
+        margin-bottom: 5px;
+        a {
+          font-weight: 500;
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+
+
+
   }
 
   &.portfolio {
