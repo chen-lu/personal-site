@@ -1,4 +1,6 @@
 @charset 'UTF-8';
+@gray: rgb(166, 166, 166);
+@gray-light: rgb(242, 242, 242);
 /* Slider */
 .slick-slider {
   position: relative;
@@ -142,31 +144,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-prev {
-  left: -25px;
-}
-[dir='rtl'] .slick-prev {
-  right: -25px;
-  left: auto;
+  left: -35px;
+
 }
 .slick-prev:before {
-  content: '←';
+  color: @gray;
+  content: '❮';
+  font-size: 30px;
 }
-[dir='rtl'] .slick-prev:before {
-  content: '→';
-}
+
 .slick-next {
-  right: -25px;
-}
-[dir='rtl'] .slick-next {
-  right: auto;
-  left: -25px;
+  right: -35px;
+
 }
 .slick-next:before {
-  content: '→';
+  color: @gray;
+  content: '❯';
+  font-size: 30px;
 }
-[dir='rtl'] .slick-next:before {
-  content: '←';
-}
+
 /* Dots */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
@@ -232,13 +228,7 @@
   color: black;
 }
 
-@gray: rgb(166, 166, 166);
-@gray-light: rgb(242, 242, 242);
-
-
-
 .carousel {
-  background: @gray-light;
   margin-left: 5%;
   width: 90%;
   margin-bottom: 10%;
@@ -247,15 +237,30 @@
   .item {
     height: 400px;
     .image{
+      image-rendering: -moz-crisp-edges;         /* Firefox */
+      image-rendering:   -o-crisp-edges;         /* Opera */
+      image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+      image-rendering: crisp-edges;
+      -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
       width: 100%;
       height: auto;
+      transform: scale(.85);
+      transition: all 0.5s ease;
     }
-
   }
   .slick-slide {
-      margin: 0 10px;
+    margin: 0 10px;
   }
-  .slick-prev:before, .slick-next:before {
-      color: @gray;
+
+  .slick-center{
+    .image{
+      image-rendering: -moz-crisp-edges;         /* Firefox */
+      image-rendering:   -o-crisp-edges;         /* Opera */
+      image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+      image-rendering: crisp-edges;
+      -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+      transform: scale(1);
+      transition: all 0.5s ease;
+    }
   }
 }
