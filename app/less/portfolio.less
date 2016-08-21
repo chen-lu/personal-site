@@ -88,14 +88,7 @@
 .slick-loading .slick-list {
   background: #fff url('ajax-loader.gif') center center no-repeat;
 }
-/* Icons */
-@font-face {
-  font-family: 'slick';
-  font-weight: normal;
-  font-style: normal;
-  src: url('fonts/slick.eot');
-  src: url('fonts/slick.eot?#iefix') format('embedded-opentype'), url('fonts/slick.woff') format('woff'), url('fonts/slick.ttf') format('truetype'), url('fonts/slick.svg#slick') format('svg');
-}
+
 /* Arrows */
 .slick-prev,
 .slick-next {
@@ -144,23 +137,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-prev {
-  left: -35px;
+  left: -40px;
 
 }
 .slick-prev:before {
   color: @gray;
   content: '❮';
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .slick-next {
-  right: -35px;
+  right: -40px;
 
 }
 .slick-next:before {
   color: @gray;
   content: '❯';
-  font-size: 30px;
+  font-size: 40px;
 }
 
 /* Dots */
@@ -209,7 +202,7 @@
 }
 .slick-dots li button:before {
   font-family: 'slick';
-  font-size: 6px;
+  font-size: 15px;
   line-height: 20px;
   position: absolute;
   top: 0;
@@ -229,13 +222,12 @@
 }
 
 .carousel {
-  margin-left: 5%;
-  width: 90%;
-  margin-bottom: 10%;
+  margin-left: 10%;
+  width: 80%;
+  max-height: 80vh;
   text-align: center;
-
   .item {
-    height: 400px;
+    height: auto;
     .image{
       image-rendering: -moz-crisp-edges;         /* Firefox */
       image-rendering:   -o-crisp-edges;         /* Opera */
@@ -245,6 +237,7 @@
       width: 100%;
       height: auto;
       transform: scale(.85);
+      opacity: .4;
       transition: all 0.5s ease;
     }
   }
@@ -260,6 +253,7 @@
       image-rendering: crisp-edges;
       -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
       transform: scale(1);
+      opacity: 1;
       transition: all 0.5s ease;
     }
   }
